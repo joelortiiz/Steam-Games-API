@@ -2,7 +2,7 @@ let key = "48741277E48619CF91FC60E15AAA0047";
 let steamid = "76561198841130785"
 
 class Perfil {
-    constructor(titulo, categoria, anio){
+    constructor(nombre, usuario, avatar){
         
     }
 }

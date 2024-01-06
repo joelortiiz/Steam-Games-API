@@ -1,0 +1,50 @@
+body {
+    background-image: url(../assets/images/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: monospace;
+}
+.container {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+.header {
+    padding: 1rem;
+    text-align: center;
+}
+#main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.article {
+    margin: 1.5rem;
+    text-align: center;
+}
+.foto_juego {
+    width: 400px;
+    height: 350px;
+    border: 1px solid gray;
+    transition: all 0.5s ease;
+}
+.foto_juego:hover {
+    transform: scale(1.05);
+    border: 1px solid red;
+
+}
+.botonLista {
+    padding: 0.8rem;
+    background-color: orange;
+    border: 2px solid rgb(67, 67, 67);
+    border-radius: 8px;
+    color: white;
+    text-shadow: black 1px 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.botonLista:hover {
+    background-color: red;
+    transform: scale(1.03);
+}
