@@ -58,11 +58,11 @@ class Juego {
 
 
 let containerJuegos = document.getElementById("main")
-const cargarPerfilAsync = async ()=> {
+const cargarJuegosAsync = async ()=> {
     let response = await fetch(`https://api.rawg.io/api/games?key=${key}`)
     let perfil = await response.json();
 
-    console.log(perfil.results)
+    //console.log(perfil.results)
     let juegos = perfil.results
     let arJuegos = []
     for (let i = 0; i < juegos.length; i++) {
@@ -70,7 +70,7 @@ const cargarPerfilAsync = async ()=> {
         for (let j = 0; j <  juegos[i].genres.length; j++) {
             generosAr +=  " "+juegos[i].genres[j].name
         }
-        console.log(juegos[i].relased)
+       
         let juego = new Juego(
             juegos[i].name,
             juegos[i].released,
@@ -97,7 +97,7 @@ const cargarPerfilAsync = async ()=> {
 
         let generos = document.createElement("FOOTER")
         generos.textContent = "Géneros: "+juego.getGenero()
-
+            
         let imagen = document.createElement("IMG")
         imagen.src = juego.getImagen()
         imagen.classList.add("foto_juego")
@@ -121,7 +121,7 @@ const cargarPerfilAsync = async ()=> {
 }
 
 
-document.addEventListener("DOMContentLoaded", cargarPerfilAsync)
+document.addEventListener("DOMContentLoaded", cargarJuegosAsync)
 // document.addEventListener("DOMContentLoaded", cargarIDJuegosAsync)
 // document.addEventListener("DOMContentLoaded", cargarJuegosAsync)
 
