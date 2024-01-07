@@ -106,6 +106,7 @@ const cargarJuegosAsync = async ()=> {
         botonlista.textContent = "AÑADIR LISTA DE DESEADOS"
         botonlista.classList.add("botonLista")
         botonlista.id = "boton"
+        botonlista.addEventListener("click", ()=> aniadirLista(event))
 
             containerJuegos.appendChild(articulo)
             articulo.appendChild(titulo)
@@ -119,7 +120,34 @@ const cargarJuegosAsync = async ()=> {
 
     }
 }
+const aniadirLista =(event)=> {
+    console.log("click")
+    event.preventDefault()
 
+    const nombre = event.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent
+    const foto = event.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.src;
+    const anio = event.target.previousElementSibling.textContent
+    
+
+const listaJuegos = JSON.parse(localStorage.getItem('listadejuegos')) ?? [];
+
+// Agrega un nuevo elemento al array
+const juegonuevo = {
+    fotojuego: foto,
+    nombre: nombre,
+    aniojuego: anio
+}
+
+const juegoExistente = listaJuegos.find(juego => juego.nombre == nombre);
+
+// Si el juego no existe, agrégalo al array y guárdalo en localStorage
+if (!juegoExistente) {
+    listaJuegos.push(juegonuevo);
+    localStorage.setItem("listadejuegos", JSON.stringify(listaJuegos));
+}
+
+
+}
 
 document.addEventListener("DOMContentLoaded", cargarJuegosAsync)
 // document.addEventListener("DOMContentLoaded", cargarIDJuegosAsync)

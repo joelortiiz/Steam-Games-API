@@ -60,7 +60,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-
+.link {
+    text-decoration: none;
+    color: orange;
+    font-size: 2rem;
+}
 .article {
     margin: 1.5rem;
     text-align: center;

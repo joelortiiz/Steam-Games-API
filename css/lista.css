@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.fotojuegolista {
+    width: 250px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+.main {
+    
+}
+.section {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.172);
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fechajuego {
+    margin: 0rem 2rem;
+}
+.precio {
+    font-size: 2.1rem;
+    color: orange;
+}

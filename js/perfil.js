@@ -68,9 +68,9 @@ const cargarPerfilAsync = async () => {
     
 
 
-    let menu = document.createElement("div") 
-    menu.classList.add("menu")
-    menu.style.display="none"
+    let menu = document.createElement("div");
+    menu.classList.add("menu");
+    menu.style.display="none";
 
     menu.appendChild(titulo)
     titulo.appendChild(logo)
